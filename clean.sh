@@ -1,15 +1,2 @@
 #!/bin/bash
-rm -rf ctextemp_*.* 
-rm -rf ctextemp_*.*.* 
-rm -rf *.*.bak 
-rm -rf *.log 
-rm -rf *.aux 
-rm -rf *.toc 
-rm -rf *.dvi 
-rm -rf *.thm 
-rm -rf *.out 
-rm -rf *.gz 
-
-rm -rf *.fdb_latexmk 
-rm -rf *.fls
-rm -rf *.xdv
+find . -name 'ctextemp_*.*' -o -name 'ctextemp_*.*.*' -o -name '*.*.bak' -o -name '*.log' -o -name '*.aux' -o -name '*.toc' -o -name '*.dvi' -o -name '*.thm' -o -name '*.out' -o -name '*.synctex.gz' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.xdv' | xargs rm -f 
